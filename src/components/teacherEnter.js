@@ -2,22 +2,22 @@ import React from 'react';
 
 const Teachers = (props) => {
 
-    EntryCourse()
-{
+//     EntryCourse()
+// {
     
-}
+// }
 
-    const listCourse=()=>{
-        return props.map(a => {
-            return <button onClick={()=> EntryCourse()}> a</button>
-        })
-    }
+//     const listCourse=()=>{
+//         return props.map(a => {
+//             return <button onClick={()=> EntryCourse()}> a</button>
+//         })
+//     }
 
 
     return (
     <div>
         <div >Course list:
-       {listCourse()}
+       {/* {listCourse()} */}
          </div>
        
     </div>
