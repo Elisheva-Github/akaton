@@ -13,10 +13,12 @@ border-radius: 70px;
 /* Profil*/
 .Profil{
 position: absolute;
-width: 219px;
-height: 85px;
-left: 848px;
-top: 192px;
+position: absolute;
+    height: 120px;
+    left: 900px;
+    width: 120px;
+    top: 360px;
+    z-index: 1;
 
 }
 
@@ -42,13 +44,13 @@ background: #FFFFFF;
 
 /* !םיאבה םיכורב */
 .welcome{
-position: absolute;
-width: 233px;
-height: 59px;
-left: 842px;
-top: 282px;
+    position: absolute;
+  
 
-
+    height: 30px;
+    left: 865px;
+    top: 300px;
+    width: 200px;
 
 /* !םיאבה םיכורב */
 

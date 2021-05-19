@@ -2,12 +2,15 @@ import React from 'react';
 
 const Students = (props) => {
     return (
-    <div>
-        {/* <div >Course list:
+        <div>
+            <div>
+            <img className="logo" src={"/images/logo.png"} />
+            </div>
+            {/* <div >Course list:
        {listCourse()}
          </div> */}
-       
-    </div>
+       grkugtdj
+        </div>
     );
 }
 

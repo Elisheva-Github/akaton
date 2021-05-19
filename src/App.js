@@ -17,7 +17,7 @@
 
 //export default App;
 import React from "react";
-import Login  from './components/login';
+import Login from './components/login';
 import TeacherEnter from './components/teacherEnter';
 import StudentEnter from './components/studentEnter';
 import './App.css';
@@ -26,25 +26,23 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  
+
 } from "react-router-dom";
 
- function App() {
+function App() {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/">
-            <Login/>
-          </Route>
-          <Route path="/teacherEnter">
-            <TeacherEnter />
-          </Route>
-          <Route path="/studentEnter">
-            <StudentEnter />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/" exact>
+          <Login />
+        </Route>
+        <Route path="/teacherEnter">
+          <TeacherEnter />
+        </Route>
+        <Route path="/studentEnter">
+          <StudentEnter />
+        </Route>
+      </Switch>
     </Router>
   );
 }
