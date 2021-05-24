@@ -72,8 +72,8 @@ const Login = () => {
     <div className="group2">
 
       {/* <button className="button" onClick={teacherClick}>  Teacher login  </button> */}
-      <button className="button" onClick={studentClick}>  התחברות   </button>
-
+      <button className="button" onClick={teacherClick}>  התחברות   </button>
+      {/* <button className="button" onClick={studentClick}>  התחברות   </button> */}
     </div>
 
 

@@ -20,6 +20,7 @@ import React from "react";
 import Login from './components/login';
 import TeacherEnter from './components/teacherEnter';
 import StudentEnter from './components/studentEnter';
+import NewClassRoom from './components/newClassRoom';
 import './App.css';
 
 import {
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path="/studentEnter">
           <StudentEnter />
+        </Route>
+        <Route path="/newClassRoom">
+          <NewClassRoom />
         </Route>
       </Switch>
     </Router>

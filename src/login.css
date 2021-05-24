@@ -1,7 +1,7 @@
 
 
 /* Rectangle 4 */
- .Rectangle{
+ /* .Rectangle{
 position: absolute;
 width: 932px;
 height: 460px;
@@ -9,6 +9,15 @@ left: 494px;
 top: 428px;
 background: #EEF8FD;
 border-radius: 70px;
+} */
+.Rectangle{
+position: absolute;
+width: 58.25rem;
+height: 28.75rem;
+left: 30.875rem;
+top: 26.75rem;
+background: #EEF8FD;
+border-radius: 4.375rem;
 }
 /* Profil*/
 .Profil{
@@ -22,6 +31,14 @@ position: absolute;
 
 }
 
+/*
+position: absolute;
+    height: 120rem;
+    width: 120rem;
+    left: 900rem;
+    tpo: 360px;
+    z-index: 1;
+*/
 /* Group 7 */
 .logo{
 position: absolute;
@@ -34,6 +51,8 @@ top: 192px;
 /* login */
 
 .login{
+    /*     /* width: 95rem;
+height: 55rem;*/
 position: relative;
 width: 1920px;
 height: 1080px;
@@ -45,32 +64,10 @@ background: #FFFFFF;
 /* !םיאבה םיכורב */
 .welcome{
     position: absolute;
-  
-
-    height: 30px;
-    left: 865px;
-    top: 300px;
-    width: 200px;
-
-/* !םיאבה םיכורב */
-
-position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-font-family: Ploni ML v2 AAA;
-font-style: normal;
-font-weight: 600;
-font-size: 40px;
-line-height: 59px;
-/* identical to box height */
-text-align: center;
-
-color: #000000;
-
-
+    left: 880px;
+    top: 305px;
+    width: 150px;
+    height: 25px;
 }
 
 
