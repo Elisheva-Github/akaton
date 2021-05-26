@@ -1,95 +1,63 @@
-import React from "react";
-// import TeacherEnter from '../components/teacherEnter';
-// import StudentEnter from './studentEnter';
-
+import React, { useState } from 'react';
 import '../login.css';
-// import 'components/static/Group 7.png'
-
-
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  // Route
-
-
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+// }from "react-router-dom";
 import { useHistory } from "react-router-dom";
-
 
 const Login = () => {
 
   let history = useHistory();
-
-  function teacherClick() {
-    history.replace("/teacherEnter");
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const login=(userName,password)=>{
+    debugger
+        
+      //שולחים לשרת את שם המשתמש והסיסמא
+      ///פניה לדאטא ביס של התלמיד
+      if(1)//תלמיד
+      history.replace("/student");
+      debugger
+      if(2)//מורה
+      history.replace("/teacher");
+      else
+       alert("User not found😥😥!! please sign up.")
   }
 
-  function studentClick() {
-    history.replace("/studentEnter");
-  }
+  // function teacherClick() {
+  //   history.replace("/teacherEnter");
+  // }
 
-  return (<div className=" login ">
+  // function studentClick() {
+  //   history.replace("/studentEnter");
+  // }
+
+  return (<div className="login">
     <img className="logo" src={"/images/logo.png"} />
     <img className="welcome" src={"/images/welcome.png"} />
     <img className="Profil" src={"/images/profil.png"} />
-    <div className="Rectangle"></div>
-
-    {/* <div className="group4" >    
-        <div className="Rectangle2" >Enter name:</div>
-          <div >Enter name:
-              <input className="name" />
-          </div>
-        </div> */}
-
-
     <div className="group4" >
       <div >
-        <input type="text" id="userName" name="userName" placeholder=":הכנס שם משתמש" className="name" />
+        <input type="text" id="userName" name="userName"
+         placeholder=":הכנס שם משתמש" className="name" 
+         value={userName} onChange={(e) =>{ 
+          console.log(e.target.value)
+          setUserName(e.target.value)}}/>
       </div>
-
     </div>
-
-
     <div className="group3" >
-
-      <input type="password" id="password" name="password" placeholder=":הכנס סיסמא" className="name" />
+      <input type="password" id="password" name="password"
+       placeholder=":הכנס סיסמא" className="name" 
+       value={password} onChange={(e) =>{ 
+        console.log(e.target.value)
+        setPassword(e.target.value)}}/>
     </div>
-
-
-
-
-
-
-
-
-    {/* <div  className="group3" >
-          <div className="Rectangle2" >Enter password: </div>
-             <div > 
-              <input className="password"/>
-             </div>
-      </div> */}
+    debugger
     <div className="group2">
-
-      {/* <button className="button" onClick={teacherClick}>  Teacher login  </button> */}
-      <button className="button" onClick={teacherClick}>  התחברות   </button>
-      {/* <button className="button" onClick={studentClick}>  התחברות   </button> */}
+      debugger
+      <button className="button" onClick={login({userName},{password})}>  התחברות   </button>
     </div>
-
-
-
-    <Router>
-      <div>
-        <Switch>
-          {/* <Route path="/teacherEnter">
-            <TeacherEnter />
-          </Route>
-          <Route path="/studentEnter">
-            <StudentEnter />
-          </Route> */}
-        </Switch>
-      </div>
-    </Router>
   </div>
   );
 

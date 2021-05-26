@@ -34,7 +34,7 @@ const Teachers = () => {
      <button className="test" > צפייה במבחנים  </button>
      <button className="hw" > תרגילים שהוגשו   </button>
      {/* <button className="addendents" >  צפייה בנוכחות   </button> */}
-     <button className="addendents" onClick={newClassClick}>  יצירת שיעור חדש   </button>
+     <button className="attendance" onClick={newClassClick}>  יצירת שיעור חדש   </button>
      </div>
    
     );

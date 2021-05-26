@@ -37,10 +37,10 @@ function App() {
         <Route path="/" exact>
           <Login />
         </Route>
-        <Route path="/teacherEnter">
+        <Route path="/teacher">
           <TeacherEnter />
         </Route>
-        <Route path="/studentEnter">
+        <Route path="/student">
           <StudentEnter />
         </Route>
         <Route path="/newClassRoom">

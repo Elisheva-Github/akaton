@@ -1,31 +1,32 @@
-import React from 'react';
-
+import React ,{useState}from 'react';
 import '../newClassRoom.css';
 
 const NewClassRoom = (props) => {
-
+    const [numLesson, setNumLesson] = useState('');
+    const [lessonName, setLessonName] = useState('');
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
 
 
     return (<div>
         <img className="classRoomImg" src={"/images/newClassRoom.PNG"} />
         {/* <select className="test" value={1,2,3} > מספר שיעור   </select> */}
         <br/>
-        <input type="number" min="0" max="24"   />
+        <input className="numLesson" type="number" min="0" max="24"   
+         value={numLesson} onChange={(e) =>{ 
+            console.log(e.target.value)
+            setNumLesson(e.target.value)}}/>
         <br/>
-        <input type="text" />
+        <input type="text" 
+         value={lessonName} onChange={(e) =>{ 
+            console.log(e.target.value)
+            setLessonName(e.target.value)}}/>
         <br/>
         לבחירת קובץ:
        <input type="file" title="בחר קובץ" /> <br />
-        {/* <input type="file" name="file1" >העלאת חומר לימוד</input> */}
-        <select name="select1">
-            <option value="1">אחד </option>
-            <option value="2">שנים/</option>
-            <option value="3">שלוש/</option>
-            <option value="4">ארבע/</option>
-            <option value="5">חמש/</option>
-        </select >
+        {/* <input type="file" name="file1" >העלאת חומר לימוד</input> */}      
         <br/>
-        <input type="date" /><br />
+        <input className="dateLesson" type="date" /><br />
         <textarea rows="8" cols="40" dir="rtl">
             הכנס הערה
         </textarea><br />
