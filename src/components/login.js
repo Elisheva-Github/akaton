@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
-import '../login.css';
 // import {
 //   BrowserRouter as Router,
 //   Switch,
 // }from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import {loginToServer} from '../services/login'
 
 const Login = () => {
 
   let history = useHistory();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const login=(userName,password)=>{
-    debugger
-        
+  
+  const login = async(userName,password) => {
+     let res = '';
+     res = await loginToServer(userName, password);
+     console.log(res);
       //שולחים לשרת את שם המשתמש והסיסמא
       ///פניה לדאטא ביס של התלמיד
       if(1)//תלמיד
@@ -24,7 +26,6 @@ const Login = () => {
       else
        alert("User not found😥😥!! please sign up.")
   }
-
   // function teacherClick() {
   //   history.replace("/teacherEnter");
   // }
@@ -56,7 +57,7 @@ const Login = () => {
     debugger
     <div className="group2">
       debugger
-      <button className="button" onClick={login({userName},{password})}>  התחברות   </button>
+      <button className="button" onClick={() => login(userName,password)}>  התחברות   </button>
     </div>
   </div>
   );
