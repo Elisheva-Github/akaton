@@ -196,10 +196,22 @@ font-weight: 600;
 font-size: 21px;
 line-height: 31px;
 text-align: center;
-
 color: #EEF8FD;
+}
 
+.forgotPassword{
+    position: absolute;
+    left: 34.69%;
+    right: 58.97%;
+    top: 70.47%;
+    bottom: 40.94%;
+}
 
+.goToSignup{ 
+    position: absolute;
+    top: 80%;
+    right: 40%;
+    left: 49%;
 }
 
 

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-import {loginToServer} from '../services/login'
+ import {viewTasksFromServer} from '../../services/viewTasks'
 
 const Tasks = () => {
 
-//   let history = useHistory();
-//   const [userName, setUserName] = useState('');
-//   const [password, setPassword] = useState('');
+  let history = useHistory();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
   
   const task = async(userName,password) => {
      let res = '';
@@ -16,19 +16,12 @@ const Tasks = () => {
       ///פניה לדאטא ביס של התלמיד
       if(1)//תלמיד
       history.replace("/student");
-      debugger
       if(2)//מורה
       history.replace("/teacher");
       else
        alert("User not found😥😥!! please sign up.")
   }
-  // function teacherClick() {
-  //   history.replace("/teacherEnter");
-  // }
 
-  // function studentClick() {
-  //   history.replace("/studentEnter");
-  // }
 
   return (<div className="login">
     <img className="logo" src={"/images/logo.png"} />
@@ -50,14 +43,14 @@ const Tasks = () => {
         console.log(e.target.value)
         setPassword(e.target.value)}}/>
     </div>
-    debugger
+    
     <div className="group2">
-      debugger
-      <button className="button" onClick={() => login(userName,password)}>  התחברות   </button>
+      
+      <button className="button" onClick={() => viewTasksFromServer(userName,password)}>  התחברות   </button>
     </div>
   </div>
   );
 
 }
 
-export default Login;
+export default Tasks;

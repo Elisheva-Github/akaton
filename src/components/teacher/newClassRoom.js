@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../newClassRoom.css';
-import {newLessonToServer} from '../services/newClassRoom'
+import '../../style/teacher/newClassRoom.css';
+import {newLessonToServer} from '../../services/newClassRoom';
 
 const NewClassRoom = (props) => {
     const [numLesson, setNumLesson] = useState('');

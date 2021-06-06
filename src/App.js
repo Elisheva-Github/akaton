@@ -1,26 +1,21 @@
-// import Login  from './components/login'
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//          <Router>
-//         <Switch>
-//         <Route path="/">
-//              <Login/>
-//         </Route>
-//      </Switch>
-//      </Router>
-//    </div>     
-//   )
-// }
-
-//export default App;
 import React, { useEffect } from "react";
 import Login from './components/login';
-import TeacherEnter from './components/teacherEnter';
-import StudentEnter from './components/studentEnter';
-import NewClassRoom from './components/newClassRoom';
+import TeacherEnter from './components/teacher/teacherEnter';
+import StudentEnter from './components/student/studentEnter';
+import NewClassRoom from './components/teacher/newClassRoom';
+import ViewAttendance from './components/teacher/viewAttendance';
+import Schedule from './components/teacher/schedule';
+import ViewTasks from './components/teacher/viewTasks';
+import ViewTests from './components/teacher/viewTests';
+import ForgotPassword from './components/forgotPassword';
+import Signup from './components/signup';
+
+import S_previousLessons from './components/student/s_previousLessons';
+import S_schedule from './components/student/s_schedule';
+import S_viewTests from './components/student/s_viewTests';
+import ViewHw from './components/student/viewHw';
+import ViewMarks from './components/student/viewMarks';
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -33,7 +28,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/login" exact>
+        <Route path="/" exact>
           <Login />
         </Route>
         <Route path="/teacher">
@@ -45,6 +40,42 @@ function App() {
         <Route path="/newClassRoom">
           <NewClassRoom />
         </Route>
+        <Route path="/attendance">
+          <ViewAttendance />
+        </Route>
+        <Route path="/tasks">
+          <ViewTasks />
+        </Route>
+        <Route path="/tests">
+          <ViewTests />
+        </Route>
+        <Route path="/forgotPassword">
+          <ForgotPassword />
+        </Route>
+        <Route path="/signup">
+          <Signup />
+        </Route>
+        <Route path="/schedule">
+          <Schedule />
+        </Route>
+
+        <Route path="/s_previousLessons">
+          <S_previousLessons />
+        </Route>
+        <Route path="/s_schedule">
+          <S_schedule />
+        </Route>
+        <Route path="/viewHw">
+          <ViewHw />
+        </Route>
+        <Route path="/viewMarks">
+          <ViewMarks />
+        </Route>
+        <Route path="/s_viewTests">
+          <S_viewTests />
+        </Route>
+     
+
       </Switch>
     </Router>
   );
