@@ -9,7 +9,6 @@ import ViewTasks from './components/teacher/viewTasks';
 import ViewTests from './components/teacher/viewTests';
 import ForgotPassword from './components/forgotPassword';
 import Signup from './components/signup';
-
 import S_previousLessons from './components/student/s_previousLessons';
 import S_schedule from './components/student/s_schedule';
 import S_viewTests from './components/student/s_viewTests';
