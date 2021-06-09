@@ -7,13 +7,16 @@ import ViewAttendance from './components/teacher/viewAttendance';
 import Schedule from './components/teacher/schedule';
 import ViewTasks from './components/teacher/viewTasks';
 import ViewTests from './components/teacher/viewTests';
+import PreviousLessons from './components/teacher/previousLessons';
 import ForgotPassword from './components/forgotPassword';
 import Signup from './components/signup';
 import S_previousLessons from './components/student/s_previousLessons';
+
 import S_schedule from './components/student/s_schedule';
 import S_viewTests from './components/student/s_viewTests';
 import ViewHw from './components/student/viewHw';
 import ViewMarks from './components/student/viewMarks';
+import Admin from './components/admin';
 
 import './App.css';
 import {
@@ -70,10 +73,13 @@ function App() {
         <Route path="/viewMarks">
           <ViewMarks />
         </Route>
-        <Route path="/s_viewTests">
-          <S_viewTests />
+        <Route path="/admin">
+          <Admin />
         </Route>
-     
+        <Route path="/previousLessons">
+          <PreviousLessons />
+        </Route>
+        
 
       </Switch>
     </Router>

@@ -11,15 +11,13 @@ const Login = () => {
   const login = async (userName, password) => {
     let res = '';
     res = await loginToServer(userName, password);
-    console.log(res);
-    //שולחים לשרת את שם המשתמש והסיסמא
-    ///פניה לדאטא ביס של התלמיד
-    if (1)//תלמיד
-      history.replace("/student");
-    if (2)//מורה
-      history.replace("/teacher");
-    else
+    console.log("res11111111", res);
+    if (res && res.kind) {
+      history.replace(`/${res.kind}`);
+    }
+    else {
       alert("User not found😥😥!! please sign up.")
+    }
   }
   const forgotPassword = () => {
     history.replace("/forgotPassword");
