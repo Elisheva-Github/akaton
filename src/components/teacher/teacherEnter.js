@@ -29,11 +29,10 @@ const Teachers = () => {
     <button className="previouslessons" onClick={viewAttendanceClick} >  שיעורים קודמים   </button>
     <button className="test" onClick={viewTasksClick}> צפייה במבחנים  </button>
     <button className="hw" onClick={viewTestsClick}> תרגילים שהוגשו   </button>
-    <button className="attendance" onClick={newClassClick}>  יצירת שיעור חדש   </button>
+    <button className="attendance" onClick={newClassClick}>יצירת שיעור חדש</button>
   </div>
 
   );
 }
-
 
 export default Teachers;

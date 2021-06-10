@@ -14,6 +14,7 @@ const Login = () => {
     console.log("res11111111", res);
     if (res && res.kind) {
       history.replace(`/${res.kind}`);
+      
     }
     else {
       alert("User not found😥😥!! please sign up.")

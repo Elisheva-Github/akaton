@@ -1,5 +1,5 @@
 export const previousLessonToServer = () => {
-    return fetch(`http://localhost:3000/previousLessons`)
+    return fetch(`http://localhost:3000/s_previousLessons,`)
         .then((res) => res.json())
         .then((data) => {
             return data;
@@ -8,4 +8,5 @@ export const previousLessonToServer = () => {
         .catch((err) => {
             console.log("error", err);
         });
-}
+
+    }

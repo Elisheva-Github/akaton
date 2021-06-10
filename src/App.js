@@ -11,12 +11,12 @@ import PreviousLessons from './components/teacher/previousLessons';
 import ForgotPassword from './components/forgotPassword';
 import Signup from './components/signup';
 import S_previousLessons from './components/student/s_previousLessons';
-
 import S_schedule from './components/student/s_schedule';
 import S_viewTests from './components/student/s_viewTests';
 import ViewHw from './components/student/viewHw';
 import ViewMarks from './components/student/viewMarks';
 import Admin from './components/admin';
+import Zoom from './components/zoom';
 
 import './App.css';
 import {
@@ -37,7 +37,10 @@ function App() {
           <TeacherEnter />
         </Route>
         <Route path="/student">
-          <StudentEnter />
+          <StudentEnter  />
+        </Route>
+        <Route path="/previousLessons">
+          <PreviousLessons />
         </Route>
         <Route path="/newClassRoom">
           <NewClassRoom />
@@ -76,11 +79,9 @@ function App() {
         <Route path="/admin">
           <Admin />
         </Route>
-        <Route path="/previousLessons">
-          <PreviousLessons />
+        <Route path="/zoom">
+          <Zoom />
         </Route>
-        
-
       </Switch>
     </Router>
   );
