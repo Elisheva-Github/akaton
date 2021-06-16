@@ -11,12 +11,12 @@ const Admin = () => {
     const [id, setId] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
+    const [subject, setSubject] = useState('');
 
-    const signupTeacher = async (firstName, lastName, id, email, password) => {
+    const signupTeacher = async (subject,firstName, lastName, id, email, password) => {
         try {
 
-            const res = await signupTeacherToServer(firstName, lastName, id, email, password);
+            const res = await signupTeacherToServer(subject,firstName, lastName, id, email, password);
             console.log(res);
             alert("ברישום בוצע בהצלחה!! ברוכים הבאים לבית סיפרנו!!!!😊😊")
             history.replace("/");
@@ -86,7 +86,13 @@ return (<div>
     </div>
 
     <div>
-        <button className="signup" onClick={() => signupTeacher(firstName, lastName, id, email, password)}> רישום   </button>
+           <select onChange={e=>{setSubject(e.target.value)}} >
+          < option >a</option> 
+          < option> b</option> 
+           </select>
+        </div>
+    <div>
+        <button className="signup" onClick={() => signupTeacher(subject,firstName, lastName, id, email, password)}> רישום   </button>
     </div>
 </div>
 )

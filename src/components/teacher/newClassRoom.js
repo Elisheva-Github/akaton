@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../style/teacher/newClassRoom.css';
 import {newLessonToServer} from '../../services/newClassRoom';
+import { useHistory } from 'react-router-dom';
 
 const NewClassRoom = (props) => {
     const [numLesson, setNumLesson] = useState('');
@@ -9,20 +10,24 @@ const NewClassRoom = (props) => {
     const [date, setDate] = useState('');
     const [notes, setNotes] = useState('');
     const [time, setTime] = useState('');
+    const [teacher, setTeacher] = useState('');
 
-
-    const postLesson=async(numLesson, lessonName,file,date,notes,time)=>
+const history=useHistory()
+    const postLesson=async(teacher,numLesson, lessonName,file,date,notes,time)=>
     {
             let res = '';
-            res = await newLessonToServer(numLesson, lessonName,file,date,notes,time);
+            res = await newLessonToServer(teacher,numLesson, lessonName,file,date,notes,time);
             console.log(res);
             alert("lesson send to server👍👍👍")
         
     }
+    useEffect(()=>setTeacher(history.location.state),[])
     return (<div>
         <img className="classRoomImg" src={"/images/newClassRoom.PNG"} />
         {/* <select className="test" value={1,2,3} > מספר שיעור   </select> */}
         <br />
+   
+
         <input className="numLesson" type="number" min="0" max="24"
             value={numLesson}
             onChange={(e) => {
@@ -63,7 +68,7 @@ const NewClassRoom = (props) => {
                 console.log(e.target.value)
                 setTime(e.target.value)
             }} />
-        <button className="button" onClick={() => postLesson(numLesson, lessonName,file,date,notes,time)}>  התחברות   </button>
+        <button className="button" onClick={() => postLesson(teacher,numLesson, lessonName,file,date,notes,time)}>  התחברות   </button>
     </div>
 
     );

@@ -4,7 +4,7 @@ import { loginToServer } from '../services/login';
 import '../style/login.css';
 const Login = () => {
 
-  let history = useHistory();
+  const history = useHistory();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
 
@@ -12,7 +12,9 @@ const Login = () => {
     let res = '';
     res = await loginToServer(userName, password);
     console.log("res11111111", res);
+      debugger
     if (res && res.kind) {
+      // history.replace(`/teacher`,{userName});
       history.replace(`/${res.kind}`);
       
     }

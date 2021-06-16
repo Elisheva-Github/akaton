@@ -5,7 +5,7 @@ import '../../style/teacher/teacherEnter.css';
 
 const Teachers = () => {
   let history = useHistory();
-
+console.log(history.location.state);
   function viewAttendanceClick() {
     history.replace("/attendance");
   }
@@ -16,7 +16,7 @@ const Teachers = () => {
     history.replace("/tests");
   }
   function newClassClick() {
-    history.replace("/newClassRoom");
+    history.replace("/newClassRoom",history.location.state);
   }
 
   return (<div>

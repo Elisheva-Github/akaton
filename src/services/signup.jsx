@@ -1,4 +1,4 @@
-export const signupToServer=(firstName, lastName, id, email, password) => {
+export const signupToServer=(subject,firstName, lastName, id, email, password) => {
     fetch('http://localhost:3000/signup', {
       method: 'POST',
       headers: {
@@ -6,6 +6,7 @@ export const signupToServer=(firstName, lastName, id, email, password) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        subject,
         firstName,
         lastName,
         id,

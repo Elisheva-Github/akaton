@@ -1,4 +1,4 @@
-export const signupTeacherToServer=(firstName, lastName, id, email, password) => {
+export const signupTeacherToServer=(subject,firstName, lastName, id, email, password) => {
     fetch('http://localhost:3000/signupTeacher', {
       method: 'POST',
       headers: {
@@ -6,6 +6,7 @@ export const signupTeacherToServer=(firstName, lastName, id, email, password) =>
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        subject,
         firstName,
         lastName,
         id,
