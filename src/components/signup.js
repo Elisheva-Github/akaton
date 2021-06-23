@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
+import { connect, useDispatch } from "react-redux";
+import { saveUser } from "../action";
 import { signupToServer } from '../services/signup';
 import '../style/signup.css';
 
-const Signup = () => {
+const Signup = (props) => {
     let history = useHistory();
+    const dispatch=useDispatch()
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [id, setId] = useState('');
@@ -91,17 +94,29 @@ const Signup = () => {
 
 
         <div>
-           <select onChange={e=>{setSubject(e.target.value)}} >
-          < option >a</option> 
-          < option> b</option> 
-           </select>
+            <select onChange={e => { setSubject(e.target.value) }} >
+                < option >a</option>
+                < option> b</option>
+            </select>
         </div>
-    <div>
-                <button className="signup" onClick={() => signup(subject, firstName, lastName, id, email, password)}> רישום   </button>
-            </div>
+        <div>
+            <button className="signup" onClick={() => {
+                signup(subject, firstName, lastName, id, email, password)
+                dispatch({ type: "save_user", payload:{ subject, firstName, lastName, id, email, password }})
+            }
+            }> רישום   </button>
         </div>
-);
+    </div>
+    );
 
 }
 
+// const mapStateToProps = (state) => {
+//     return {
+//         fName: state.user,
+//     };
+// };
+
+// export default Signup;
 export default Signup;
+// connect(null, { saveUser })(

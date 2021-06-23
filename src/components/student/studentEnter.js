@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 import {attendanceToServer} from '../../services/attendance'
+import {connect, useDispatch} from "react-redux";
 
 const Students = (props) => {
 
@@ -58,7 +59,7 @@ const Students = (props) => {
             <button className="hw" onClick={hwClick}> תרגילים שהוגשו   </button>
             <button className="schedule" onClick={scheduleClick}>  מערכת שעות   </button>
             <button className="test" onClick={testClick}>  מבחנים  </button>
-
+            <h1>fname: {props.fname}</h1>
 
             
             {/* <button className="button" onClick={()=>enterLessonClick(firstName)}>  כניסה לשיעור  </button> */}
@@ -67,5 +68,13 @@ const Students = (props) => {
         </div>
     );
 }
+const mapStateToProps = (state) => {
+  debugger
+  return {
+      fname: state.user?.user?.firstName,
+  };
+};
+// export default connect(mapStateToProps, {})(Login);
+export default connect(mapStateToProps, {})(Students);
 
-export default Students;
+// export default Students;

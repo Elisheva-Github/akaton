@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
+import {connect, useDispatch} from "react-redux";
 import { loginToServer } from '../services/login';
 import '../style/login.css';
-const Login = () => {
-
+const Login = (props) => {
+const dispatch=useDispatch()
   const history = useHistory();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -12,11 +13,12 @@ const Login = () => {
     let res = '';
     res = await loginToServer(userName, password);
     console.log("res11111111", res);
-      debugger
+      
     if (res && res.kind) {
       // history.replace(`/teacher`,{userName});
       history.replace(`/${res.kind}`);
-      
+      dispatch({ type: "save_user", payload:res.result})
+
     }
     else {
       alert("User not found😥😥!! please sign up.")
@@ -56,7 +58,7 @@ const Login = () => {
     <div className="group2">
       <button className="button" onClick={() => login(userName, password)}>  התחברות   </button>
     </div>
-
+     <h1>fname: {props.fname}</h1>
     <div>
       <button className="forgotPassword" onClick={() => forgotPassword()}>  שכחת סיסמא?   </button>
     </div>
@@ -69,4 +71,13 @@ const Login = () => {
 
 }
 
-export default Login;
+
+const mapStateToProps = (state) => {
+  debugger
+  return {
+    fname: state.user?.user?.firstName,
+  };
+};
+export default connect(mapStateToProps, {})(Login);
+
+// export default Login;
