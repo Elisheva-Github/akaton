@@ -17,6 +17,11 @@ import ViewHw from './components/student/viewHw';
 import ViewMarks from './components/student/viewMarks';
 import Admin from './components/admin';
 import Zoom from './components/zoom';
+import Instructions from './components/instructions';
+import NewTravel from './components/newTravel';
+import ViewTravel from './components/viewTravel';
+import DriverAndPassenger from './components/driverAndPassenger';
+
 
 import './App.css';
 import {
@@ -63,7 +68,6 @@ function App() {
         <Route path="/schedule">
           <Schedule />
         </Route>
-
         <Route path="/s_previousLessons">
           <S_previousLessons />
         </Route>
@@ -81,6 +85,18 @@ function App() {
         </Route>
         <Route path="/zoom">
           <Zoom />
+        </Route>
+        <Route path="/instructions">
+          <Instructions />
+        </Route>
+        <Route path="/newTravel">
+          <NewTravel />
+        </Route>
+        <Route path="/viewTravel">
+          <ViewTravel />
+        </Route>
+        <Route path="/driverAndPassenger">
+          <DriverAndPassenger />
         </Route>
       </Switch>
     </Router>

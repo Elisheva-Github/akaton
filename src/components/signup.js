@@ -105,6 +105,7 @@ const Signup = (props) => {
                 dispatch({ type: "save_user", payload:{ subject, firstName, lastName, id, email, password }})
             }
             }> רישום   </button>
+            
         </div>
     </div>
     );
