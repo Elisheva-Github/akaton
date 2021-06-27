@@ -69,7 +69,8 @@ const DriverAndPassenger = (props) => {
         console.log(e.target.value)
         setpayment(e.target.value)
     }} /><label for="City1">תשלום</label><br />
-    <input name="City" id="City1" type="radio" checked="checked" 
+
+    <input name="City" id="City2" type="radio" checked="checked" 
     value={payment} onChange={(e) => {
         console.log(e.target.value)
         setpayment(e.target.value)
