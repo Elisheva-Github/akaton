@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import {connect, useDispatch} from "react-redux";
 // import { loginToServer } from '../services/login';
 import '../style/login.css';
+import Header from './header';
 
   const ViewTravel = () => {
     
@@ -10,7 +11,7 @@ import '../style/login.css';
 
   return (<div className="login">
  
-   
+   <Header/>
     <div>
       <button > נוסעים   </button>
     </div>

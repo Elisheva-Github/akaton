@@ -1,6 +1,6 @@
  import React, { useState } from 'react';
  import { useHistory } from "react-router-dom";
-
+import Header from './header';
 
 const NewTravel=()=>
 {
@@ -19,6 +19,9 @@ const NewTravel=()=>
 
 
     return(<div>
+                  <Header/>
+
+
       <button  onClick={() => driver()}> אני נהג   </button>
 
       <button  onClick={() => passenger()}>  אני נוסע   </button>
