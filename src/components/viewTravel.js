@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 // import React, { useState ,useEffect} from 'react';
 import { useHistory } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 import { getAllPassengersFromServer } from '../services/viewPassenger';
 import { getAllDriversFromServer } from '../services/viewDrivers';
 import '../style/login.css';
+import './viewTravel.css';
 
 
 
@@ -29,7 +30,7 @@ const ViewTravel = () => {
 
   const getAllDrivers = async () => {
     try {
-debugger;
+      debugger;
       const res = await getAllDriversFromServer();
       debugger;
       console.log(res);
@@ -61,14 +62,14 @@ debugger;
 
 
 
-  return (<div class="bg-img" style={{backgroundImage: `url(${homeBG})`}}>
+  return (<div class="bg-img" style={{ backgroundImage: `url(${homeBG})` }}>
 
 
     <div>
-      <button onClick={()=>getAllDrivers()}> נהגים   </button>
+      <button className="new-btn btn1" onClick={() => getAllDrivers()}> נהגים   </button>
     </div>
     <div>
-      <button onClick={()=>getAllPassengers()}>  נוסעים  </button>
+      <button className="new-btn btn2" onClick={() => getAllPassengers()}>  נוסעים  </button>
     </div>
 
 
@@ -76,25 +77,25 @@ debugger;
 
 
 
-     <div>
+    <div>
 
       <table border="1">
-     <tr>
-       <td>תאריך</td>
-       <td>שעה</td>
-       <td>יעד</td>
-       <td>מוצא</td>
-       <td>בתשלום</td>
-       <td>מין</td>
-       <td>מספר נוסעים</td>
-       <td>מייל</td>
-       <td>טלפון</td>
-       <td>התראות בטפל</td>
-       <td>התראות במייל</td>
-       <td>נהג/נוסע</td>
-     </tr>
+        <tr>
+          <td>תאריך</td>
+          <td>שעה</td>
+          <td>יעד</td>
+          <td>מוצא</td>
+          <td>בתשלום</td>
+          <td>מין</td>
+          <td>מספר נוסעים</td>
+          <td>מייל</td>
+          <td>טלפון</td>
+          <td>התראות בטפל</td>
+          <td>התראות במייל</td>
+          <td>נהג/נוסע</td>
+        </tr>
         {
-          arr.map(function(item, index){
+          arr.map(function (item, index) {
             return <tr key={index}>
               <td>{item.date}</td>
               <td>{item.time}</td>
@@ -112,7 +113,7 @@ debugger;
             </tr>
           })
         }
-      </table> 
+      </table>
     </div>
 
 
