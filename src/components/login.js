@@ -30,9 +30,15 @@ const dispatch=useDispatch()
     <div>
       <button  onClick={() => newTravel()}> נסיעה חדשה   </button>
     </div>
+
+    <div>
+      
+    </div>
     <div>
       <button  onClick={() => instructions()}> הוראות   </button>
     </div>
+
+    <div>
   </div>
   );
 
