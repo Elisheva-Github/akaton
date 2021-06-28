@@ -1,17 +1,22 @@
-export const signupToServer=(subject,firstName, lastName, id, email, password) => {
-    fetch('http://localhost:3000/signup', {
+export const signupToServer=(date,hour,departure, destination,payment,gender,numPassengers,email, phoneNamber,emailAlerts,userType) => {
+    fetch('http://localhost:3000/createTravel', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        subject,
-        firstName,
-        lastName,
-        id,
-        email,
-        password
+        date,
+        hour,
+        departure,
+         destination,
+         payment,
+         gender,
+         numPassengers,
+         email, 
+         phoneNamber,
+         emailAlerts,
+         userType
       })
     });
     }

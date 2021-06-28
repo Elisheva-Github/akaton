@@ -9,19 +9,24 @@ import { signupToServer } from '../services/signup';
 const DriverAndPassenger = (props) => {
     let history = useHistory();
     const dispatch=useDispatch()
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
     const [date, setDate] = useState('');
+    const [hour, setHour] = useState('');
+    const [departure, setdeparture] = useState('');
+    const [destination, setdestination] = useState('');
+    const [payment, setpayment] = useState('');
+    const [gender, setgender] = useState('');
+    const [numPassengers, setnumPassengers] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNamber, setPhoneNamber] = useState('');
-    const [person, setPeson] = useState('');
-    const [sPoint, setSPoint] = useState('');
-    const [fPoint, setFPoint] = useState('');
-
-    const signup = async ( firstName, lastName, date, email, phoneNamber,person,sPoint,fPoint) => {
+    const [emailAlerts, setemailAlerts] = useState('');
+    const [phoneAlerts, setphoneAlerts] = useState('');
+    const [userType, setuserType] = useState('');
+   
+    
+    const signup = async (  date,hour,departure, destination,payment,gender,numPassengers,email, phoneNamber,emailAlerts,userType) => {
         try {
 
-            const res = await signupToServer( firstName, lastName, date, email, phoneNamber,person,sPoint,fPoint);
+            const res = await signupToServer(date,hour,departure, destination,payment,gender,numPassengers,email, phoneNamber,emailAlerts,userType);
             console.log(res);
             alert("ברישום בוצע בהצלחה!ו!!!!😊😊");
             history.replace("/viewTravel");
@@ -34,31 +39,54 @@ const DriverAndPassenger = (props) => {
 
  return (<div >
 
+     
+ {/* id */}
+ <input  type="date"
+            value={date} onChange={(e) => {
+                console.log(e.target.value)
+                setDate(e.target.value)
+            }}
+        />
+<div>
 
- {/* firstname */}
+
+<input type="time"
+            value={hour} onChange={(e) => {
+                console.log(e.target.value)
+                setHour(e.target.value)
+            }} />
+                <label for="City1">הכנס שעה</label>
+
+                </div>
+
+ {/* payment */}
  
-     <div >
-         <input type="text" id="firstName" name="firstName"
-             placeholder=":הכנס שם פרטי"
-             value={firstName} onChange={(e) => {
-                 console.log(e.target.value)
-                 setFirstName(e.target.value)
-             }} />
+
    
- </div>
+<div>
+   <input name="City" id="City1" type="radio" checked="checked" 
+    value={payment} onChange={(e) => {
+        console.log(e.target.value)
+        setpayment(e.target.value)
+    }} /><label for="City1">תשלום</label><br />
 
- {/* lastname */}
+    <input name="City" id="City2" type="radio" checked="checked" 
+    value={payment} onChange={(e) => {
+        console.log(e.target.value)
+        setpayment(e.target.value)
+    }} /><label for="City1">ללא תשלום</label><br />
+</div>
 
-     <div >
-         <input type="text" id="lastname" name="lastname"
-             placeholder=":הכנס שם משפחה" 
-             value={lastName} onChange={(e) => {
+
+
+<div >
+         <input type="text" id="email" name="email"
+             placeholder=": הכנס מספר טלפון" 
+             value={phoneNamber} onChange={(e) => {
                  console.log(e.target.value)
-                 setLastName(e.target.value)
+                 setPhoneNamber(e.target.value)
              }} />
      </div>
- 
-
  
 
  {/* email */}
@@ -73,37 +101,31 @@ const DriverAndPassenger = (props) => {
      </div>
 
 
- {/* id */}
- <input  type="date"
-            value={date} onChange={(e) => {
-                console.log(e.target.value)
-                setDate(e.target.value)
-            }}
-        />
+ 
 
 
+ 
  <div>
-     <select onChange={e => { setPhoneNamber(e.target.value) }} >
-         < option >מייל</option>
-         < option>טלפון</option>
-     </select>
- </div>
+ <input name="City" id="City1" type="radio" checked="checked" 
+    value={gender} onChange={(e) => {
+        console.log(e.target.value)
+        setgender(e.target.value)
+    }} /><label for="City1">איש</label><br />
 
-
- <div>
-     <select onChange={e => { setPeson(e.target.value) }} >
-         < option >איש</option>
-         < option>אישה</option>
-     </select>
+<input name="City" id="City1" type="radio" checked="checked" 
+    value={gender} onChange={(e) => {
+        console.log(e.target.value)
+        setgender(e.target.value)
+    }} /><label for="City1">אישה</label><br />
  </div>
 
  
       <div >
          <input type="text" id="lastname" name="lastname"
              placeholder="הכנס מוצא" 
-             value={sPoint} onChange={(e) => {
+             value={departure} onChange={(e) => {
                  console.log(e.target.value)
-                 setSPoint(e.target.value)
+                 setdeparture(e.target.value)
              }} />
      </div> 
 
@@ -112,22 +134,63 @@ const DriverAndPassenger = (props) => {
       <div >
          <input type="text" id="lastname" name="lastname"
              placeholder="הכנס יעד" 
-             value={fPoint} onChange={(e) => {
+             value={destination} onChange={(e) => {
                  console.log(e.target.value)
-                 setFPoint(e.target.value)
+                 setdestination(e.target.value)
              }} />
      </div> 
 
+<div>
+     <input  type="number" min="0" max="24"
+            value={numPassengers}
+            onChange={(e) => {
+                console.log(e.target.value)
+                setnumPassengers(e.target.value)
+            }} />
+             <label for="City1">כמות נוסעים</label>
+             </div>
+
+<input name="City" id="City1" type="radio" checked="checked" 
+    value={userType} onChange={(e) => {
+        console.log(e.target.value)
+        setuserType(e.target.value)
+    }} /><label for="City1">נהג</label><br />
+
+    <input name="City" id="City1" type="radio" checked="checked" 
+    value={userType} onChange={(e) => {
+        console.log(e.target.value)
+        setuserType(e.target.value)
+    }} /><label for="City1">נוסע</label><br />
+
+
+<div>
+<label for="Check2">איך רצונך לקבל את העידכון על הנסיעה המתאימה</label>
+<br />
+<input id="Check1" type="checkbox"
+value={phoneAlerts} onChange={(e) => {
+        console.log(e.target.value)
+        setphoneAlerts(e.target.value)
+}} /><label for="Check1">בטלפון</label><br />
+
+
+        <input id="Check2" type="checkbox" checked="checked"
+        value={emailAlerts} onChange={(e) => {
+            console.log(e.target.value)
+            setemailAlerts(e.target.value)
+         }} /><label for="Check2">במייל</label><br />
+     </div>   
  <div>
 
      <button className="signup" onClick={() => {
-         signup( firstName, lastName, date, email, phoneNamber,person,sPoint,fPoint)
-         dispatch({ type: "save_user", payload:{ firstName, lastName, date, email, phoneNamber,person,sPoint,fPoint }})
+         signup( date,hour,departure,destination,payment,gender,numPassengers,email, phoneNamber,emailAlerts,userType)
+         dispatch({ type: "save_user", payload:{date,hour,departure,destination,payment,gender,numPassengers,email, phoneNamber,emailAlerts,userType }})
      }
      }> רישום   </button>
      
  </div>
-</div>
+
+ </div>
+
 );
 
 }
