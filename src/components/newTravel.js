@@ -24,9 +24,6 @@ const NewTravel = () => {
   }
 
 
-
-
-
   return (<div class="bg-img" style={{ backgroundImage: `url(${homeBG})` }}>
     <Header />
 
