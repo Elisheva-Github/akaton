@@ -1,7 +1,6 @@
 import React from "react";
 import Login from './components/login';
 
-import Instructions from './components/instructions';
 import NewTravel from './components/newTravel';
 import ViewTravel from './components/viewTravel';
 import DriverAndPassenger from './components/driverAndPassenger';
@@ -21,10 +20,7 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Login />
-        </Route>
-        <Route path="/instructions">
-          <Instructions />
-        </Route>
+          </Route>
         <Route path="/newTravel">
           <NewTravel />
         </Route>
