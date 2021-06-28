@@ -72,52 +72,6 @@ const ViewTravel = () => {
     </div>
 
 
-
-
-
-
-    <div>
-
-      <table border="1">
-        <tr>
-          <td>תאריך</td>
-          <td>שעה</td>
-          <td>יעד</td>
-          <td>מוצא</td>
-          <td>בתשלום</td>
-          <td>מין</td>
-          <td>מספר נוסעים</td>
-          <td>מייל</td>
-          <td>טלפון</td>
-          <td>התראות בטפל</td>
-          <td>התראות במייל</td>
-          <td>נהג/נוסע</td>
-        </tr>
-        {
-          arr.map(function (item, index) {
-            return <tr key={index}>
-              <td>{item.date}</td>
-              <td>{item.time}</td>
-              <td>{item.destination}</td>
-              <td>{item.departure}</td>
-              <td>{item.payment}</td>
-              <td>{item.gender}</td>
-              <td>{item.numPassengers}</td>
-              <td>{item.email}</td>
-              <td>{item.phone}</td>
-              <td>{item.emailAlerts}</td>
-              <td>{item.phoneAlerts}</td>
-              <td>{item.userType}</td>
-              {/* <button onClick={()=>onHideDiv()}>צור קשר</button> */}
-            </tr>
-          })
-        }
-      </table>
-    </div>
-
-
-
-
   </div>
   );
 
