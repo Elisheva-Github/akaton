@@ -67,12 +67,11 @@ const Header = (props) => {
         history.replace("/instructions");
     }
 
-    return (<div >
-
-            <button  onClick={() => viewHome()}>  דף הבית   </button>
-            <button className="bt1" onClick={() => viewTravel()}>  צפיה בנסיעות   </button>
-            <button className="bt2"  onClick={() => newTravel()}> נסיעה חדשה   </button>
-            <button className="bt3" onClick={() => instructions()}> הוראות   </button>
+    return (<div class="menu">
+        <button className="menu-btn" onClick={() => viewHome()}>  דף הבית   </button>
+        <button className="menu-btn" onClick={() => newTravel()}> נסיעה חדשה   </button>
+        <button className="menu-btn" onClick={() => viewTravel()}>  נסיעות קיימות   </button>
+        <button className="menu-btn" onClick={() => instructions()}> הוראות   </button>
     </div>
     );
 

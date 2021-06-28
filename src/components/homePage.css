@@ -1,32 +1,4 @@
-/* .bt1{
-position: absolute;
-width: 91px;
-height: 18px;
-left: 1126px;
-top: 22px;
-}
-.bt2{
-    position: absolute;
-    width: 91px;
-    height: 18px;
-    left: 1000px;
-    top: 22px;
-    }
-.bt3{
-position: absolute;
-width: 91px;
-height: 18px;
-left: 880px;
-top: 22px;
-}
-.img{
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    left: 0px;
-    top: 0px;
 
-} */
 
 .bg-img {
     height: 100vh;
@@ -34,4 +6,19 @@ top: 22px;
     background-position-y: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.menu {
+    background-color: transparent;
+    direction: rtl;
+}
+
+.menu-btn {
+    border: none;
+    background-color: transparent;
+    color: #1c2c53;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 30px;
 }

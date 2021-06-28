@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import Header from './header';
+import homeBG from '../images/create.png';
 
+import './homePage.css';
 import DriverAndPassenger from './driverAndPassenger';
 
 const NewTravel = () => {
@@ -25,7 +27,7 @@ const NewTravel = () => {
 
 
 
-  return (<div>
+  return (<div class="bg-img" style={{backgroundImage: `url(${homeBG})`}}>
     <Header />
 
     <button onClick={() => driver()}> אני נהג   </button>

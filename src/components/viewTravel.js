@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
-import {connect, useDispatch} from "react-redux";
+import homeBG from '../images/last.png';
+
+import './homePage.css';
 // import { loginToServer } from '../services/login';
 import '../style/login.css';
 import Header from './header';
@@ -9,7 +10,7 @@ import Header from './header';
     
   
 
-  return (<div className="login">
+  return (<div class="bg-img" style={{backgroundImage: `url(${homeBG})`}}>
  
    <Header/>
     <div>
