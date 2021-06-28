@@ -7,7 +7,7 @@ import { getAllDriversFromServer } from '../services/viewDrivers';
 import '../style/login.css';
 import './viewTravel.css';
 
-
+import Header from './header';
 
 
 import homeBG from '../images/last.png';
@@ -15,7 +15,6 @@ import homeBG from '../images/last.png';
 import './homePage.css';
 // import { loginToServer } from '../services/login';
 import '../style/login.css';
-import Header from './header';
 
 
 // const arr=[{date:"20/20/2021",time:9},{date:"01/01/2001",time:5}]
@@ -64,7 +63,7 @@ const ViewTravel = () => {
 
   return (<div class="bg-img" style={{ backgroundImage: `url(${homeBG})` }}>
 
-
+<Header/>
     <div>
       <button className="new-btn btn1" onClick={() => getAllDrivers()}> נהגים   </button>
     </div>
