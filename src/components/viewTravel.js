@@ -292,14 +292,10 @@ const ViewTravel = () => {
           <td>שעה</td>
           <td>יעד</td>
           <td>מוצא</td>
-          <td>בתשלום</td>
           <td>מין</td>
           <td>מספר נוסעים</td>
           <td>מייל</td>
           <td>טלפון</td>
-          <td>התראות בטפל</td>
-          <td>התראות במייל</td>
-          <td>נהג/נוסע</td>
         </tr>
         {
           arr.map(function (item, index) {
@@ -308,14 +304,10 @@ const ViewTravel = () => {
               <td>{item.time}</td>
               <td>{item.destination}</td>
               <td>{item.departure}</td>
-              <td>{item.payment}</td>
               <td>{item.gender}</td>
               <td>{item.numPassengers}</td>
               <td>{item.email}</td>
               <td>{item.phone}</td>
-              <td>{item.emailAlerts}</td>
-              <td>{item.phoneAlerts}</td>
-              <td>{item.userType}</td>
               <button onClick={() => onHideDiv(index)}>צור קשר</button>
               <div id="divOfEmialAndPhone" style={{ visibility: "hidden" }}>הכנס מייל וטלפון
 

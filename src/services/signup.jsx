@@ -1,4 +1,4 @@
-export const signupToServer=(date,hour,departure, destination,payment,gender,numPassengers,email, phoneNamber,emailAlerts,userType) => {
+export const signupToServer=(date,hour,departure, destination,numPassengers,email, phoneNamber,userType) => {
     fetch('http://localhost:3000/createTravel', {
       method: 'POST',
       headers: {
@@ -10,12 +10,9 @@ export const signupToServer=(date,hour,departure, destination,payment,gender,num
         hour,
         departure,
          destination,
-         payment,
-         gender,
          numPassengers,
          email, 
          phoneNamber,
-         emailAlerts,
          userType
       })
     });

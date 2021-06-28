@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 import { saveUser } from "../action";
 import { signupToServer } from '../services/signup';
-
+import './newTravel.css';
 
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -40,7 +40,7 @@ const DriverAndPassenger = (props) => {
 
     const [emailAlerts, setemailAlerts] = useState('');
     const [phoneAlerts, setphoneAlerts] = useState('');
-    const [userType, setuserType] = useState(isDriver? 'driver': 'passanger');
+    const [userType, setuserType] = useState(isDriver ? true : false);
     const [levelNum, setLevelNum] = useState(1);
 
 
@@ -88,19 +88,15 @@ const DriverAndPassenger = (props) => {
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
     }
-    const handlePhoneAlertsChange = (e) => {
-        setphoneAlerts(e.target.value)
-    }
-    const handleEmailAlertsChange = (e) => {
-        setemailAlerts(e.target.value)
-    }
-    
-    const saveAllData = (e) => {
+    // const handlePhoneAlertsChange = (e) => {
+    //     setphoneAlerts(e.target.value)
+    // }
+    // const handleEmailAlertsChange = (e) => {
+    //     setemailAlerts(e.target.value)
+    // }
+    // const saveAllData = (e) => {
 
-
-
-
-    }
+    // }
 
     /*const changeDialogContenet= (e) => {
         setLevelNum(e.target.id);
@@ -198,48 +194,60 @@ const DriverAndPassenger = (props) => {
             <DialogTitle>
 
             </DialogTitle>
-            <DialogContent>
+            <DialogContent >
                 {
-                    <div>
-                        <div>
-                            <label>מאיפה יוצאים?</label>
-                            <input value={departure} type="text" onChange={handleDepartureChange} />
+                    <div class="back_img">
+                        <div class="line1">
+                            <input value={departure} class="text" type="text" onChange={handleDepartureChange} />
+                            <label class="line">?מאיפה יוצאים  </label>
+
                         </div>
                         <br />
-                        <div>
-                            <label>לאן נוסעים?</label>
-                            <input value={destination} type="text" onChange={handleDestinationChange} />
+                        <div class="line2">
+                            <input value={destination} class="text" type="text" onChange={handleDestinationChange} />
+                            <label class="line">?לאן נוסעים</label>
+
                         </div>
                         <br />
-                        <div>
-                            <label>כמות הנוסעים</label>
-                            <input value={numPassengers} type="text" onChange={handlenumPassengersChange} />
+                        <div class="line3">
+                            <input value={numPassengers} class="text" type="text" onChange={handlenumPassengersChange} />
+                            <label class="line">כמות הנוסעים   </label>
+
                         </div>
                         <br />
-                        <div>
-                            <label>תאריך</label>
-                            <input type="date" value={date} onChange={handleDateChange} />
+                        <div class="line4">
+                            <input type="date" class="text" value={date} onChange={handleDateChange} />
+                            <label class="line">תאריך</label>
+
                         </div>
                         <br />
+                        <div class="line5">
+                            <input type="text" class="text" value={hour} onChange={handleHourChange} />
+                            <label class="line">שעה</label>
+
+                        </div>
                         <div>
-                            <label>שעה</label>
-                            <input type="text" value={hour} onChange={handleHourChange} />
+                            <br />
+                        </div>
+                        <div class="line6">
+                            <input type="text" class="text" name="mail" onC={handleEmailChange} />
+                            <label class="line">מייל</label>
+                        </div>
+                        <div class="line7">
+                            <input type="text" class="text" name="phone" onChange={handlePhoneNamberChange} />
+                            <label class="line">טלפון</label>
+
                         </div>
 
 
-                        <div>
-                            <input type="button" value="לסיום ורישום נסיעה" name="done" onClick={signup} />
+                        <div >
+                            <input class="btn" type="button" value="לסיום ורישום נסיעה" name="done" onClick={signup} />
                         </div>
                     </div>
                 }
                 {/* <TextField fullWidth label="PhoneNamber"
             required error={!!errorPhone} helperText={errorPhone || ''} onChange={handlePhoneNamberChange} />
-            /*                <div>
-                    <label>גבר</label><input  type="radio" name="gender1" value="1" checked onC={handlenumPassengersChange}/>
-                    <label>אישה</label><input  type="radio" name="gender1" value="2" onChange={handlenumPassengersChange}/>
-
-                </div>
-                                <br/>
+            /*               
                 <div>
                     <label>בחינם</label><input  type="radio" name="payment1" value="1" checked onChange={handlenumPassengersChange}/>
                     <label>בתשלום</label><input  type="radio" name="payment2" value="2" onChange={handlenumPassengersChange}/>

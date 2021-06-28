@@ -14,13 +14,13 @@ const NewTravel = () => {
   const history = useHistory();
 
   const passenger = () => {
-    setShowModel(true);
     setIsDriver(false);
+    setShowModel(true);
   }
 
   const driver = () => {
-    setShowModel(true);
     setIsDriver(true);
+    setShowModel(true);
   }
 
   return (<div class="bg-img" style={{ backgroundImage: `url(${create})` }}>
