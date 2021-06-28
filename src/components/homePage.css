@@ -1,0 +1,29 @@
+.bt1{
+position: absolute;
+width: 91px;
+height: 18px;
+left: 1126px;
+top: 22px;
+}
+.bt2{
+    position: absolute;
+    width: 91px;
+    height: 18px;
+    left: 1000px;
+    top: 22px;
+    }
+.bt3{
+position: absolute;
+width: 91px;
+height: 18px;
+left: 880px;
+top: 22px;
+}
+.img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 0px;
+    top: 0px;
+
+}

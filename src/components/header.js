@@ -41,11 +41,13 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
+import './homePage.css';
+
 // import { loginToServer } from '../services/login';
 
 const Header = (props) => {
     const history = useHistory();
-  
+
 
     const viewHome = () => {
 
@@ -66,19 +68,20 @@ const Header = (props) => {
     }
 
     return (<div >
-         <div >
-            <button onClick={() => viewHome()}>  דף הבית   </button>
+
+        <div >
+            <button  onClick={() => viewHome()}>  דף הבית   </button>
         </div>
 
         <div >
-            <button onClick={() => viewTravel()}>  צפיה בנסיעות   </button>
+            <button className="bt1" onClick={() => viewTravel()}>  צפיה בנסיעות   </button>
         </div>
 
         <div>
-            <button onClick={() => newTravel()}> נסיעה חדשה   </button>
+            <button className="bt2"  onClick={() => newTravel()}> נסיעה חדשה   </button>
         </div>
         <div>
-            <button onClick={() => instructions()}> הוראות   </button>
+            <button className="bt3" onClick={() => instructions()}> הוראות   </button>
         </div>
     </div>
     );
