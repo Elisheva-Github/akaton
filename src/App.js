@@ -4,6 +4,7 @@ import Login from './components/login';
 import NewTravel from './components/newTravel';
 import ViewTravel from './components/viewTravel';
 import DriverAndPassenger from './components/driverAndPassenger';
+import ShowTable from './components/showTable';
 
 
 import './App.css';
@@ -20,7 +21,7 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Login />
-          </Route>
+        </Route>
         <Route path="/newTravel">
           <NewTravel />
         </Route>
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/driverAndPassenger">
           <DriverAndPassenger />
+        </Route>
+        <Route path="/showTable">
+          <ShowTable />
         </Route>
       </Switch>
     </Router>

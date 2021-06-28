@@ -32,3 +32,17 @@ border: none;
         font-weight: 600;
         color: #1c2c53;
     }
+
+    .btn3{   
+        position: absolute;
+        left: 80%;
+        right: 35.14%;
+        top: 60.14%;
+        bottom: 46.58%;
+        
+        background: #FBAB41;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        width: 150px;
+        border: none;
+        }
