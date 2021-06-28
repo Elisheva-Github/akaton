@@ -22,10 +22,10 @@ import Select from '@material-ui/core/Select';
 
 const DriverAndPassenger = (props) => {
 
-    const {onHide, show } = { ...props }
+    const { onHide, show, isDriver } = { ...props }
 
     let history = useHistory();
-    const dispatch=useDispatch()
+    const dispatch = useDispatch()
     const [date, setDate] = useState('');
     const [hour, setHour] = useState('');
     const [departure, setdeparture] = useState('');
@@ -40,28 +40,28 @@ const DriverAndPassenger = (props) => {
 
     const [emailAlerts, setemailAlerts] = useState('');
     const [phoneAlerts, setphoneAlerts] = useState('');
-    const [userType, setuserType] = useState('');
+    const [userType, setuserType] = useState(isDriver? 'driver': 'passanger');
     const [levelNum, setLevelNum] = useState(1);
 
-   
-    
-    // const signup = async (  date,hour,departure, destination,payment,gender,numPassengers,email, phoneNamber,emailAlerts,userType) => {
-    //     try {
 
-    //         const res = await signupToServer(date,hour,departure, destination,payment,gender,numPassengers,email, phoneNamber,emailAlerts,userType);
-    //         console.log(res);
-    //         alert("ברישום בוצע בהצלחה!ו!!!!😊😊");
-    //         history.replace("/viewTravel");
-    //     }
-    //     catch (error) {
-    //         alert("הרישום נכשל😒");
-    //     }
-    // }
+
+    const signup = async () => {
+        try {
+
+            const res = await signupToServer(date,hour,departure, destination,email, phoneNamber,userType);
+            console.log(res);
+            alert("ברישום בוצע בהצלחה!ו!!!!😊😊");
+            history.replace("/viewTravel");
+        }
+        catch (error) {
+            alert("הרישום נכשל😒");
+        }
+    }
 
     const closeDialog = () => {
         setPhoneNamber(null);
         setErrorPhone('');
-       
+
         onHide();
     }
 
@@ -94,10 +94,14 @@ const DriverAndPassenger = (props) => {
     const handleEmailAlertsChange = (e) => {
         setemailAlerts(e.target.value)
     }
+    
     const saveAllData = (e) => {
 
+
+
+
     }
-    
+
     /*const changeDialogContenet= (e) => {
         setLevelNum(e.target.id);
         if(levelNum==1){
@@ -191,44 +195,44 @@ const DriverAndPassenger = (props) => {
 
     return (
         <Dialog open={show} onClose={closeDialog} maxWidth="xs" fullWidth={true} >
-        <DialogTitle> 
-          
-        </DialogTitle>
-    <DialogContent>
-        {
-            <div>
-                <div>
-                    <label>מאיפה יוצאים?</label>
-                    <input value={departure} type="text" onChange={handleDepartureChange}/>
-                </div>
-                <br/>
-                <div>
-                    <label>לאן נוסעים?</label>
-                    <input value={destination} type="text" onChange={handleDestinationChange}/>
-                </div>
-                <br/>
-                <div>
-                    <label>כמות הנוסעים</label>
-                    <input value={numPassengers} type="text" onChange={handlenumPassengersChange}/>
-                </div>
-                <br/>
-                <div>
-                <label>תאריך</label>
-                    <input  type="date" value={date} onChange={handleDateChange}/>
-                </div> 
-                <br/>
-                <div>
-                    <label>שעה</label>
-                    <input  type="time" value={hour} onChange={handleHourChange}/>
-                </div> 
-               
-             
+            <DialogTitle>
+
+            </DialogTitle>
+            <DialogContent>
+                {
                     <div>
-                        <input type="button" value="לסיום ורישום נסיעה" name="done" onClick={saveAllData}/>
+                        <div>
+                            <label>מאיפה יוצאים?</label>
+                            <input value={departure} type="text" onChange={handleDepartureChange} />
+                        </div>
+                        <br />
+                        <div>
+                            <label>לאן נוסעים?</label>
+                            <input value={destination} type="text" onChange={handleDestinationChange} />
+                        </div>
+                        <br />
+                        <div>
+                            <label>כמות הנוסעים</label>
+                            <input value={numPassengers} type="text" onChange={handlenumPassengersChange} />
+                        </div>
+                        <br />
+                        <div>
+                            <label>תאריך</label>
+                            <input type="date" value={date} onChange={handleDateChange} />
+                        </div>
+                        <br />
+                        <div>
+                            <label>שעה</label>
+                            <input type="text" value={hour} onChange={handleHourChange} />
+                        </div>
+
+
+                        <div>
+                            <input type="button" value="לסיום ורישום נסיעה" name="done" onClick={signup} />
+                        </div>
                     </div>
-            </div>
-        }
-        {/* <TextField fullWidth label="PhoneNamber"
+                }
+                {/* <TextField fullWidth label="PhoneNamber"
             required error={!!errorPhone} helperText={errorPhone || ''} onChange={handlePhoneNamberChange} />
             /*                <div>
                     <label>גבר</label><input  type="radio" name="gender1" value="1" checked onC={handlenumPassengersChange}/>
@@ -244,20 +248,20 @@ const DriverAndPassenger = (props) => {
                 <br/>
 
 */
-   }
-    </DialogContent>
-    <DialogActions>
-        {/* <Button variant="contained" color="primary" onClick={handleSave}>SAVE</Button>
+                }
+            </DialogContent>
+            <DialogActions>
+                {/* <Button variant="contained" color="primary" onClick={handleSave}>SAVE</Button>
         <Button variant="contained" color="secondary" onClick={handleCancle}>CANCLE</Button> */}
-    </DialogActions>
-</Dialog>);
- /* <input id="1" type="button" value="1" onClick={setLevelNum}/>
-            -------------
-            <input id="2" type="button" value="2" onClick={(e) => {
-                 setLevelNum(e.target.value)}}/>
-            -------------
-            <input id="3" type="button" value="3" onClick={(e) => {
-                 setLevelNum(e.target.value)}}/>*/
+            </DialogActions>
+        </Dialog>);
+    /* <input id="1" type="button" value="1" onClick={setLevelNum}/>
+               -------------
+               <input id="2" type="button" value="2" onClick={(e) => {
+                    setLevelNum(e.target.value)}}/>
+               -------------
+               <input id="3" type="button" value="3" onClick={(e) => {
+                    setLevelNum(e.target.value)}}/>*/
 
 }
 
