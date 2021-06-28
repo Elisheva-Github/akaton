@@ -7,7 +7,7 @@ import './homePage.css';
 const Login = (props) => {
 
 
-  return (<div class="bg-img" style={{ backgroundImage: `url(${homeBG})` }} >
+  return (<div class="bg-img home-bg" style={{ backgroundImage: `url(${homeBG})` }} >
     <Header />
   </div>
   );

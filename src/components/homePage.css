@@ -8,6 +8,10 @@
     background-repeat: no-repeat;
 }
 
+.home-bg {
+    height: 3650px;
+}
+
 .menu {
     background-color: transparent;
     direction: rtl;
