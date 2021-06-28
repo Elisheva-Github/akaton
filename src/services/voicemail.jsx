@@ -2,23 +2,21 @@
 let token
 let templateId
 export const sendVoiceMail = (username, email, phone) => {
+    console.log(username+","+ email+","+phone);
     fetch('https://www.call2all.co.il/ym/api/Login', {
         method: 'POST',
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-
+        body:{
+            
             username,
             email
 
-        })
-
+        }
     }).then((res) => {
-        return res.json()
-
-    }).then((res) => {
+        console.log(res);
         token = res
         return res
 
