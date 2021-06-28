@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import Header from './header';
 import homeBG from '../images/create.png';
-
+import './viewTravel.css';
 import './homePage.css';
 import DriverAndPassenger from './driverAndPassenger';
 
@@ -27,12 +27,12 @@ const NewTravel = () => {
 
 
 
-  return (<div class="bg-img" style={{backgroundImage: `url(${homeBG})`}}>
+  return (<div class="bg-img" style={{ backgroundImage: `url(${homeBG})` }}>
     <Header />
 
-    <button onClick={() => driver()}> אני נהג   </button>
+    <button className="new-btn btn1" onClick={() => driver()}> רוצה לנהוג   </button>
 
-    <button onClick={() => passenger()}>  אני נוסע   </button>
+    <button className="new-btn btn2" onClick={() => passenger()}> רוצה לנסוע   </button>
 
     <DriverAndPassenger
       show={showModel}

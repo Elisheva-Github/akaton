@@ -1,0 +1,34 @@
+.btn1{   
+position: absolute;
+left: 40%;
+right: 35.14%;
+top: 44.14%;
+bottom: 46.58%;
+
+background: #FBAB41;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+border-radius: 50px;
+width: 150px;
+border: none;
+}
+
+.btn2{   
+    position: absolute;
+    left: 60%;
+    right: 25.14%;
+    top: 44.14%;
+    bottom: 46.58%;
+}
+   
+
+    .new-btn {
+        background: #FBAB41;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        width: 195px;
+        border: none;
+        height: 61px;
+        font-size: 23px;
+        font-weight: 600;
+        color: #1c2c53;
+    }
