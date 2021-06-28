@@ -69,20 +69,10 @@ const Header = (props) => {
 
     return (<div >
 
-        <div >
             <button  onClick={() => viewHome()}>  דף הבית   </button>
-        </div>
-
-        <div >
             <button className="bt1" onClick={() => viewTravel()}>  צפיה בנסיעות   </button>
-        </div>
-
-        <div>
             <button className="bt2"  onClick={() => newTravel()}> נסיעה חדשה   </button>
-        </div>
-        <div>
             <button className="bt3" onClick={() => instructions()}> הוראות   </button>
-        </div>
     </div>
     );
 
