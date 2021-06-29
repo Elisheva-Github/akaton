@@ -10,7 +10,7 @@ import './viewTravel.css';
 import Header from './header';
 
 
-import showTble from '../images/showTable.png';
+//import showTble from '../images/showTable.png';
 
 // import './homePage.css';
 // import { loginToServer } from '../services/login';
@@ -61,7 +61,7 @@ const ShowTable = () => {
 
 
 
-    return (<div class="bg-img" style={{ backgroundImage: `url(${showTble})` }}>
+    return (<div>
 
         <Header />
 
