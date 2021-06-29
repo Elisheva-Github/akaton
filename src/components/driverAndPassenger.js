@@ -192,6 +192,7 @@ const DriverAndPassenger = (props) => {
     return (
         <Dialog open={show} onClose={closeDialog} maxWidth="xs" fullWidth={true} >
             <DialogTitle>
+                <div class="title">נסיעה חדשה</div>
 
             </DialogTitle>
             <DialogContent >
@@ -230,7 +231,7 @@ const DriverAndPassenger = (props) => {
                             <br />
                         </div>
                         <div class="line6">
-                            <input type="text" class="text" name="mail" onC={handleEmailChange} />
+                            <input type="text" class="text" name="mail" onChange={handleEmailChange} />
                             <label class="line">מייל</label>
                         </div>
                         <div class="line7">

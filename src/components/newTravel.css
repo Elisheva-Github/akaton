@@ -1,4 +1,14 @@
-.popap {
+.MuiPaper-rounded {
+    border-radius: 4px;
+    min-width: 700px;
+    min-height: 550px;
+
+}
+.MuiDialog-paperFullWidth {
+    min-width: 700px;
+    min-height: 550px;
+}
+.popup{
     height: 450px;
 }
 .back_img {
@@ -8,138 +18,144 @@
     left: 50px;
     background: #e6e7e8;
     right: 80px;
-    top: 20px;
+    top: 70px;
 }
-.line1 {
+.line1{
     position: absolute;
     width: 420px;
     height: 33px;
-    top: 15px;
+    top: 50px;
     font-family: Ploni DL 1.1 AAA;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-align: right;
-    left: 80px;
-    color: #1c2c53;
-    right: 200px;
+    color: #1C2C53;
+    right: 200px
+
 }
-.line2 {
+.line2{
     position: absolute;
     width: 420px;
     height: 33px;
-    top: 65px;
+    top: 100px;
     font-family: Ploni DL 1.1 AAA;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-align: right;
-    left: 80px;
-    color: #1c2c53;
+    color: #1C2C53;
     right: 200px;
+
 }
-.line3 {
+.line3{
     position: absolute;
     width: 420px;
     height: 33px;
-    top: 115px;
+    top: 150px;
     font-family: Ploni DL 1.1 AAA;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-align: right;
-    left: 80px;
     right: 200px;
-    color: #1c2c53;
+    color: #1C2C53;
+
 }
-.line4 {
+.line4{
     position: absolute;
     width: 420px;
     height: 33px;
-    top: 165px;
+    top: 200px;
     font-family: Ploni DL 1.1 AAA;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-align: right;
-    left: 80px;
-    color: #1c2c53;
+    color: #1C2C53;
     right: 200px;
+
 }
-.line5 {
+.line5{
     position: absolute;
     width: 420px;
     height: 33px;
-    top: 215px;
+    top: 250px;
     font-family: Ploni DL 1.1 AAA;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-align: right;
-    left: 80px;
-    color: #1c2c53;
+    color: #1C2C53;
     right: 200px;
+
 }
-.line6 {
+.line6{
     position: absolute;
     width: 420px;
     height: 33px;
-    top: 265px;
+    top: 300px;
     font-family: Ploni DL 1.1 AAA;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-align: right;
-    left: 80px;
-    color: #1c2c53;
+    color: #1C2C53;
     right: 200px;
+
 }
-.line7 {
+.line7{
     position: absolute;
     width: 420px;
     height: 33px;
-    top: 315px;
+    top: 350px;
     font-family: Ploni DL 1.1 AAA;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-align: right;
-    left: 80px;
-    color: #1c2c53;
+    color: #1C2C53;
     right: 200px;
+
 }
+
 
 .text {
     position: absolute;
     width: 175px;
     height: 30px;
-    left: 120px;
-    background: #f2f2f2;
+    left: 350px;
+    /* background: #F2F2F2; */
     border-radius: 5px;
 }
 .btn {
-    position: absolute;
-    left: 210px;
-    bottom: 100px;
-    right: 250px;
-    top: 380px;
-    bottom: 30px;
     background: #43bda2;
-    border: 0.653653px solid #43bda2;
-    box-sizing: border-box;
-    box-shadow: 0px 5.92806px 11.1151px rgb(0 0 0 / 10%);
-    border-radius: 58.8287px;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    border-radius: 50px;
+    width: 195px;
+    border: none;
+    height: 61px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #1c2c53;
 }
 
-.MuiDialog-paperFullWidth {
-    /* width: calc(100% - 64px); */
-    min-width: 700px;
-    min-height: 500px;
+.title {
+    position: absolute;
+    width: 175px;
+    height: 30px;
+    left: 250px;
+    color: #FBAB41;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+    font-family: Ploni DL 1.1 AAA;
 }

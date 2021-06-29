@@ -177,7 +177,7 @@ import './homePage.css';
 import '../style/login.css';
 import Header from './header';
 import {sendVoiceMail} from '../services/voicemail';
-
+import Contact from './contact';
 
 // const arr=[{date:"20/20/2021",time:9},{date:"01/01/2001",time:5}]
 const ViewTravel = () => {
@@ -185,6 +185,8 @@ const ViewTravel = () => {
       const [em, setEmail] = useState('');
 
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [showModel, setShowModel] = useState(false);
+    const [item, setItem] = useState({});
 
   // useEffect(()=> {
   //  setArr=(getAllDrivers())
@@ -194,12 +196,9 @@ const ViewTravel = () => {
 
   const getAllDrivers = async () => {
     try {
-      debugger;
       const res = await getAllDriversFromServer();
-      debugger;
       console.log(res);
       setArr(res.alldrivers);
-      debugger;
       console.log(arr);
 
     }
@@ -214,7 +213,6 @@ const ViewTravel = () => {
       const res = await getAllPassengersFromServer();
       console.log(res);
       setArr(res.allpassengers);
-      debugger;
       console.log(arr);
 
     }
@@ -223,9 +221,9 @@ const ViewTravel = () => {
     }
   }
 
-  const onHideDiv = (index) => {
-    document.getElementById("divOfEmialAndPhone").style.visibility = "visible";
-
+  const onHideDiv = (item) => {
+    setItem(item);
+    setShowModel(true);
   }
 
   const sendMailAndPhone = async (em,phoneNamber,item) => {
@@ -286,30 +284,29 @@ const ViewTravel = () => {
 
     <div class="view-travel">
 
-      <table border="1">
+      <table>
         <tr>
-          <td>תאריך</td>
-          <td>שעה</td>
-          <td>יעד</td>
-          <td>מוצא</td>
-          <td>מין</td>
-          <td>מספר נוסעים</td>
-          <td>מייל</td>
-          <td>טלפון</td>
+          <td class="td1">תאריך</td>
+          <td  class="td2">שעה</td>
+          <td  class="td3">יעד</td>
+          <td class="td4">מוצא</td>
+          <td class="td5">מייל</td>
+          <td class="td6">טלפון</td>
+          <button class="hidden" onClick={() => onHideDiv(item)}>צור קשר</button>
+
         </tr>
         {
           arr.map(function (item, index) {
             return <tr key={index}>
-              <td>{item.date}</td>
-              <td>{item.time}</td>
-              <td>{item.destination}</td>
-              <td>{item.departure}</td>
-              <td>{item.gender}</td>
-              <td>{item.numPassengers}</td>
-              <td>{item.email}</td>
-              <td>{item.phone}</td>
-              <button onClick={() => onHideDiv(index)}>צור קשר</button>
-              <div id="divOfEmialAndPhone" style={{ visibility: "hidden" }}>הכנס מייל וטלפון
+              {/* <td class="td1">{item.date}</td> */}
+              <td class="td1">{item.date}</td>
+              <td class="td2">{item.time}</td>
+              <td class="td3">{item.destination}</td>
+              <td class="td4">{item.departure}</td>
+              <td class="td5">{item.email}</td>
+              <td class="td6">{item.phone}</td>
+              <button class="btn-basic" onClick={() => onHideDiv(item)}>צור קשר</button>
+              {/* <div id="divOfEmialAndPhone" style={{ visibility: "hidden" }}>הכנס מייל וטלפון
 
  
                 <input id="11" type="text"
@@ -330,15 +327,19 @@ const ViewTravel = () => {
 
                 <button onClick={() => sendMailAndPhone(em,phoneNumber,item)}>שליחה</button>
 
-              </div>
-            </tr>
+              </div>*/}
+            </tr> 
           })
         }
       </table>
 
     </div>
 
-
+    <Contact
+      show={showModel}
+      onHide={(e) => setShowModel(false)}
+      item={item}
+    />
 
 
   </div>
