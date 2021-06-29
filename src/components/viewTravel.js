@@ -273,10 +273,10 @@ const ViewTravel = () => {
 
 <Header/>
     <div>
-      <button onClick={() => getAllDrivers()}> נהגים   </button>
+      <button class="new-btn btn11" onClick={() => getAllDrivers()}> הצעות מנהגים   </button>
     </div>
     <div>
-      <button onClick={() => getAllPassengers()}>  נוסעים  </button>
+      <button class="new-btn btn22" onClick={() => getAllPassengers()}>  בקשות מנוסעים  </button>
     </div>
 
 
@@ -284,7 +284,7 @@ const ViewTravel = () => {
 
 
 
-    <div>
+    <div class="view-travel">
 
       <table border="1">
         <tr>
