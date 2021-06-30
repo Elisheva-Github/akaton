@@ -47,14 +47,42 @@ const DriverAndPassenger = (props) => {
 
     const signup = async () => {
         try {
+            await signupToServer(date, hour, departure, destination, email, phoneNamber, userType);
+           // console.log('res' + res);
+            // alert("ברישום בוצע בהצלחה!ו!!!!😊😊");
 
-            const res = await signupToServer(date,hour,departure, destination,email, phoneNamber,userType);
-            console.log(res);
-            alert("ברישום בוצע בהצלחה!ו!!!!😊😊");
-            history.replace("/viewTravel");
+
+
+            const res = [
+                    {
+                    "date": "2021-02-06",
+                    "hour": "19:00",
+                    "destination": "הזית 5, ירושלים, ישראל",
+                    "departure": "זרחי 30, ירושלים, ישראל",
+                    "payment": false,
+                    "gender": "male",
+                    "numPassengers": 7,
+                    "email": "ts3237113@gmail.com",
+                    "phone": "0583237113",
+                    "userType": "driver",
+                    },
+                    {
+                    "date": "2021-02-06",
+                    "hour": "20:15",
+                    "destination": "הזית 13, ירושלים, ישראל",
+                    "departure": "זרחי 18, ירושלים, ישראל",
+                    "payment": false,
+                    "gender": "male",
+                    "numPassengers": 7,
+                    "email": "ts3237113@gmail.com",
+                    "phone": "0583237113",
+                    "userType": "driver",
+                    }
+                    ];
+            history.replace("/viewTravel", { res });
         }
         catch (error) {
-            alert("הרישום נכשל😒");
+            // alert("הרישום נכשל😒");
         }
     }
 

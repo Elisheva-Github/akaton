@@ -163,7 +163,7 @@
 // export default ViewTravel;
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import React, { useState ,useEffect} from 'react';
 import { useHistory } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
@@ -181,9 +181,12 @@ import Contact from './contact';
 
 // const arr=[{date:"20/20/2021",time:9},{date:"01/01/2001",time:5}]
 const ViewTravel = () => {
-  const [arr, setArr] = useState([]);
-      const [em, setEmail] = useState('');
-
+  const history = useHistory();
+ // console.log('f'+history.location.state.f);
+  const res = history.location.state ? history.location.state.res : [];
+    useEffect(() => setArr(res), [])
+    const [arr, setArr] = useState([]);
+    const [em, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [showModel, setShowModel] = useState(false);
     const [item, setItem] = useState({});

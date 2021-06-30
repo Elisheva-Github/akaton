@@ -75,11 +75,12 @@
     border-radius: 50px;
     width: 120px;
     border: none;
-    height: 40px;
+    height: 30px;
     color: #1c2c53;
     text-align: center;
     font-family: inherit;
     font-weight: 600;
+    margin-right: 10px;
 }
 
 .btn {
@@ -111,15 +112,14 @@
 }
 
 td {
-    background-color: white;
-    border-radius: 50px;
+    background-color: #F2F2F2;
+    border-radius: 5px;
     border: none;
     height: 15px;
     color: #1c2c53;
     text-align: center;
     font-family: inherit;
     padding-bottom: 10px;
-    box-shadow: 0px 8px 15px 5px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -132,7 +132,7 @@ tr {
 
 }
 .td1 {
-    width: 200px;
+    width: 150px;
 }
 
 .td2 {
@@ -148,7 +148,7 @@ tr {
 }
 
 .td5 {
-    width: 150px;
+    width: 200px;
 }
 
 .td6 {
