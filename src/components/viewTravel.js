@@ -291,8 +291,8 @@ const ViewTravel = () => {
         <tr>
           <td class="td1">תאריך</td>
           <td  class="td2">שעה</td>
-          <td  class="td3">יעד</td>
-          <td class="td4">מוצא</td>
+          <td  class="td3">מוצא</td>
+          <td class="td4">יעד</td>
           <td class="td5">מייל</td>
           <td class="td6">טלפון</td>
           <button class="hidden" onClick={() => onHideDiv(item)}>צור קשר</button>
@@ -304,8 +304,8 @@ const ViewTravel = () => {
               {/* <td class="td1">{item.date}</td> */}
               <td class="td1">{item.date}</td>
               <td class="td2">{item.hour}</td>
-              <td class="td3">{item.destination}</td>
-              <td class="td4">{item.departure}</td>
+              <td class="td3">{item.departure}</td>
+              <td class="td4">{item.destination }</td>
               <td class="td5">{item.email}</td>
               <td class="td6">{item.phone}</td>
               <button class="btn-basic" onClick={() => onHideDiv(item)}>צור קשר</button>

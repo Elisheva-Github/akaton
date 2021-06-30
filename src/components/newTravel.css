@@ -153,7 +153,6 @@
     font-size: 14px;
     line-height: 21px;
     text-align: right;
-    color: #1C2C53;
     right: 200px;
 
 }
@@ -165,6 +164,12 @@
     left: 80px;
     /* background: #F2F2F2; */
     border-radius: 5px;
+    direction: rtl;
+    color: #1C2C53;
+    font-family: Ploni DL 1.1 AAA;
+    font-size: 14px;
+
+
 }
 .btn {
     background: #43bda2;

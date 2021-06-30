@@ -55,27 +55,21 @@ const DriverAndPassenger = (props) => {
 
             const res = [
                     {
-                    "date": "02/06/2021",
-                    "hour": "19:00",
-                    "destination": "הזית 5, ירושלים, ישראל",
-                    "departure": "זרחי 30, ירושלים, ישראל",
-                    "payment": false,
-                    "gender": "male",
-                    "numPassengers": 7,
-                    "email": "ts3237113@gmail.com",
-                    "phone": "0583237113",
+                    "date": "04/07/2021",
+                    "hour": "07:00",
+                    "destination": "האומן 25, ירושלים, ישראל",
+                    "departure": "צפרירים 16, ירושלים, ישראל",
+                    "email": "sellyb@digital.gov.il",
+                    "phone": "0509933054",
                     "userType": "driver",
                     },
                     {
-                    "date": "02/06/2021",
-                    "hour": "20:15",
-                    "destination": "הזית 13, ירושלים, ישראל",
-                    "departure": "זרחי 18, ירושלים, ישראל",
-                    "payment": false,
-                    "gender": "male",
-                    "numPassengers": 7,
-                    "email": "ts3237113@gmail.com",
-                    "phone": "0583237113",
+                    "date": "04/07/2021",
+                    "hour": "06:15",
+                    "destination": "רבקה 13, ירושלים, ישראל",
+                    "departure": " טללים 4, ירושלים, ישראל",
+                    "email": "ds0527659854@gmail.com",
+                    "phone": "0527659854",
                     "userType": "driver",
                     }
                     ];
@@ -245,7 +239,7 @@ const DriverAndPassenger = (props) => {
                         </div>
                         <br />
                         <div class="line4">
-                            <input type="text" class="text" value={date} onChange={handleDateChange} />
+                            <input type="date" class="text" value={date} onChange={handleDateChange} />
                             <label class="line">תאריך</label>
 
                         </div>
