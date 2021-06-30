@@ -219,7 +219,7 @@ const DriverAndPassenger = (props) => {
 
     return (
         <Dialog open={show} onClose={closeDialog} maxWidth="xs" fullWidth={true} >
-            <DialogTitle>
+            <DialogTitle class="title">
                 <div class="title">נסיעה חדשה</div>
 
             </DialogTitle>

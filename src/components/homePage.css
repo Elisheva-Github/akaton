@@ -9,13 +9,13 @@
 }
 
 .home-bg {
-    height: 3650px;
+    height: 3600px;
 }
 
 .menu {
     background-color: transparent;
     direction: rtl;
-    padding-right: 150px;
+    padding-right: 60px;
 }
 
 .menu-btn {

@@ -8,6 +8,7 @@
     min-width: 600px;
     min-height: 600px;
     background-color: #e6e7e8 !important;
+    overflow-x: hidden
 }
 .popup{
     height: 450px;
@@ -149,16 +150,16 @@
 }
 
 .title {
-    position: absolute;
     width: 175px;
     height: 30px;
-    left: 250px;
     color: #FBAB41;
     border-radius: 5px;
     text-align: center;
     font-size: 33px;
     font-weight: bold;
     font-family: Ploni DL 1.1 AAA;
+    align-self: center;
+    margin-top: 15px;
 }
 .save {
     background: #43bda2;
