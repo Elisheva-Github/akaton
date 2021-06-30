@@ -131,21 +131,6 @@
     position: absolute;
     width: 420px;
     height: 33px;
-    top: 150px;
-    font-family: Ploni DL 1.1 AAA;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: right;
-    color: #1C2C53;
-    right: 200px;
-
-}
-.line72{
-    position: absolute;
-    width: 420px;
-    height: 33px;
     top: 200px;
     font-family: Ploni DL 1.1 AAA;
     font-style: normal;
@@ -154,7 +139,22 @@
     line-height: 21px;
     text-align: right;
     color: #1C2C53;
-    right: 200px;
+    right: 120px;
+
+}
+.line72{
+    position: absolute;
+    width: 420px;
+    height: 33px;
+    top: 270px;
+    font-family: Ploni DL 1.1 AAA;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: right;
+    color: #1C2C53;
+    right: 120px;
 
 }
 
@@ -200,21 +200,6 @@
     margin-top: 15px;
 }
 
-.save {
-    background: #43bda2;
-    /* box-shadow: 0px 8px 15px rgb(0 0 0 / 10%); */
-    border-radius: 50px;
-    width: 195px;
-    border: none;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1c2c53;
-    position: absolute;
-    top: 500px;
-    left: 50px;
-}
-
 .save2 {
     background: #43bda2;
     /* box-shadow: 0px 8px 15px rgb(0 0 0 / 10%); */
@@ -226,8 +211,8 @@
     font-weight: 600;
     color: #1c2c53;
     position: absolute;
-    top: 300px;
-    left: 50px;
+    top: 450px;
+    left: 100px;
 }
 
 .contact {

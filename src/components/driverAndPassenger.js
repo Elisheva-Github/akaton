@@ -55,7 +55,7 @@ const DriverAndPassenger = (props) => {
 
             const res = [
                     {
-                    "date": "2021-02-06",
+                    "date": "02/06/2021",
                     "hour": "19:00",
                     "destination": "הזית 5, ירושלים, ישראל",
                     "departure": "זרחי 30, ירושלים, ישראל",
@@ -67,7 +67,7 @@ const DriverAndPassenger = (props) => {
                     "userType": "driver",
                     },
                     {
-                    "date": "2021-02-06",
+                    "date": "02/06/2021",
                     "hour": "20:15",
                     "destination": "הזית 13, ירושלים, ישראל",
                     "departure": "זרחי 18, ירושלים, ישראל",
@@ -245,7 +245,7 @@ const DriverAndPassenger = (props) => {
                         </div>
                         <br />
                         <div class="line4">
-                            <input type="date" class="text" value={date} onChange={handleDateChange} />
+                            <input type="text" class="text" value={date} onChange={handleDateChange} />
                             <label class="line">תאריך</label>
 
                         </div>

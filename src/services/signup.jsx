@@ -10,7 +10,7 @@ export const signupToServer=(date,hour,departure, destination,numPassengers,emai
         hour,
         departure,
          destination,
-         numPassengers,
+       //  numPassengers,
          email, 
          phoneNamber,
          userType

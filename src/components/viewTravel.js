@@ -303,7 +303,7 @@ const ViewTravel = () => {
             return <tr key={index}>
               {/* <td class="td1">{item.date}</td> */}
               <td class="td1">{item.date}</td>
-              <td class="td2">{item.time}</td>
+              <td class="td2">{item.hour}</td>
               <td class="td3">{item.destination}</td>
               <td class="td4">{item.departure}</td>
               <td class="td5">{item.email}</td>

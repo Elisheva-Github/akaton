@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 import { saveUser } from "../action";
 import { signupToServer } from '../services/signup';
-import './newTravel.css';
+import './contact.css';
 import {sendVoiceMail} from '../services/voicemail';
 import  {mailToServer}  from '../services/mail';
 import '../style/login.css';
@@ -84,41 +84,45 @@ const Contact = (props) => {
 
 
     return (
-        <Dialog open={show} onClose={closeDialog} maxWidth="xs" fullWidth={true} >
-            <DialogTitle>
-                <div class="title">יצירת קשר לתיאום נסיעה</div>
+        <Dialog class="contact" open={show} onClose={closeDialog} maxWidth="xs" fullWidth={true} >
+            <DialogTitle class="title2">
+                <div class="title2">יצירת קשר לתיאום נסיעה</div>
 
             </DialogTitle>
             <DialogContent >
                 {
-                    <div>
+                    <div class="contact">
                        
                      
                         <div>
                             <br />
                         </div>
-                        <div class="line6">
+                        <div class="line62">
                             <input type="text" class="text" name="mail" onChange={handleEmailChange} />
                             <label class="line">מייל</label>
                         </div>
-                        <div class="line7">
+                        <div class="line72">
                             <input type="text" class="text" name="phone" onChange={handlePhoneNamberChange} />
                             <label class="line">טלפון</label>
 
                         </div>
 
-                        <button class="btn-basic" onClick={() => sendMailAndPhone(email,phoneNamber,item)}>שליחה</button>
-
+                       
                        
                     </div>
                 }
                
             </DialogContent>
             <DialogActions>
-                {/* <Button variant="contained" color="primary" onClick={handleSave}>SAVE</Button>
-        <Button variant="contained" color="secondary" onClick={handleCancle}>CANCLE</Button> */}
-            </DialogActions>
-        </Dialog>);
+            <button class="btn save2" onClick={() => sendMailAndPhone(email,phoneNamber,item)}>שליחה</button>
+
+                </DialogActions>
+        </Dialog>
+        
+
+        
+        
+        );
   
 
 }
