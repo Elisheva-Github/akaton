@@ -269,9 +269,7 @@ const DriverAndPassenger = (props) => {
                         </div>
 
 
-                        <div >
-                            <input class="btn" type="button" value="לסיום ורישום נסיעה" name="done" onClick={signup} />
-                        </div>
+                        
                     </div>
                 }
                 {/* <TextField fullWidth label="PhoneNamber"
@@ -288,6 +286,9 @@ const DriverAndPassenger = (props) => {
                 }
             </DialogContent>
             <DialogActions>
+            <div >
+                            <input class="btn save" type="button" value="חפש לי נסיעות" name="done" onClick={signup} />
+            </div>
                 {/* <Button variant="contained" color="primary" onClick={handleSave}>SAVE</Button>
         <Button variant="contained" color="secondary" onClick={handleCancle}>CANCLE</Button> */}
             </DialogActions>

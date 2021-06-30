@@ -5,8 +5,9 @@
 
 }
 .MuiDialog-paperFullWidth {
-    min-width: 700px;
-    min-height: 550px;
+    min-width: 600px;
+    min-height: 600px;
+    background-color: #e6e7e8 !important;
 }
 .popup{
     height: 450px;
@@ -131,7 +132,7 @@
     position: absolute;
     width: 175px;
     height: 30px;
-    left: 350px;
+    left: 80px;
     /* background: #F2F2F2; */
     border-radius: 5px;
 }
@@ -158,4 +159,18 @@
     font-size: 33px;
     font-weight: bold;
     font-family: Ploni DL 1.1 AAA;
+}
+.save {
+    background: #43bda2;
+    /* box-shadow: 0px 8px 15px rgb(0 0 0 / 10%); */
+    border-radius: 50px;
+    width: 195px;
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1c2c53;
+    position: absolute;
+    top: 500px;
+    left: 50px;
 }
